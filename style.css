@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2, h3 {
+    color: #333;
+}
+
+input, select {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Login Page */
+#login-page {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+#login-error {
+    color: red;
+}
+
+/* Admin Page Styles */
+#admin-page {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#player-list-display {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+#player-list-display div {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #e7f4e0;
+    border-radius: 5px;
+}
+
+/* Game Board for Player */
+#player-page {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.question-box {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.question-box:hover {
+    background-color: #0056b3;
+}
+
+/* Player's Score */
+#player-score-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Player Scores Display Section */
+#player-scores-display {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#player-scores-display div {
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #333;
+}

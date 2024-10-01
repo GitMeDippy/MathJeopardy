@@ -1,26 +1,66 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Jeopardy Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Math Jeopardy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <h1>Math Jeopardy</h1>
-        <div class="login-box">
-            <h2>Login</h2>
-            <select id="role" class="input-field">
-                <option value="player">Player</option>
-                <option value="admin">Admin</option>
-            </select>
-            <input type="text" id="username" class="input-field" placeholder="Username">
-            <input type="password" id="password" class="input-field" placeholder="Password">
-            <button onclick="login()" class="login-button">Login</button>
-            <p id="error-message" class="error-message"></p>
-        </div>
+    <!-- Login Page -->
+    <div id="login-page">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-error"></p>
     </div>
-    <script src="login.js"></script>
+
+    <!-- Admin Page -->
+   <div id="admin-page" class="hidden">
+    <h2>Admin Dashboard</h2>
+
+    <h3>Add Player</h3>
+    <input type="text" id="new-username" placeholder="New Player Username">
+    <input type="password" id="new-password" placeholder="New Player Password">
+    <button onclick="addPlayer()">Add Player</button>
+
+    <!-- Section for showing added players with Edit and Delete options -->
+    <h4>Newly Added Players</h4>
+    <div id="player-list-display"></div>
+
+    <!-- Section for showing player scores -->
+    <h3>Players and Scores</h3>
+    <div id="player-scores-display"></div>
+
+    <h3>Add Category</h3>
+    <input type="text" id="new-category" placeholder="Category Name">
+    <button onclick="addCategory()">Add Category</button>
+
+    <h3>Manage Questions</h3>
+    <select id="category-list"></select>
+    <input type="text" id="question-text" placeholder="Question">
+    <input type="text" id="question-answer" placeholder="Answer">
+    <button onclick="addQuestion()">Add Question</button>
+
+    <h3>Manage Scores</h3>
+    <select id="player-list"></select>
+    <input type="number" id="player-score" placeholder="Score">
+    <button onclick="updateScore()">Update Score</button>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+    <!-- Player Page -->
+    <div id="player-page" class="hidden">
+        <h2>Welcome, <span id="player-name"></span></h2>
+        <div id="game-board">
+            <!-- Categories and questions will be dynamically created here -->
+        </div>
+        <h3>Your Score: <span id="player-score-display"></span></h3>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
