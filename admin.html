@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <button onclick="logout()" class="logout-button">Logout</button>
+        </header>
+        <div class="content">
+            <!-- Manage Categories Section -->
+            <section class="category-management-section">
+                <h2>Manage Categories</h2>
+                <input type="text" id="category" class="input-field" placeholder="Enter category name">
+                <button onclick="addCategory()" class="action-button">Add Category</button>
+                <div id="categories-list" class="categories-list"></div>
+            </section>
+            
+            <!-- Add Question Section -->
+            <section class="add-question-section">
+                <h2>Add New Question</h2>
+                <select id="category-select" class="input-field"></select>
+                <input type="text" id="question" class="input-field" placeholder="Enter question">
+                <input type="text" id="answer" class="input-field" placeholder="Enter answer">
+                <input type="number" id="score" class="input-field" placeholder="Enter question score">
+                <button onclick="addQuestion()" class="action-button">Add Question</button>
+            </section>
+            
+            <!-- Existing Questions Section -->
+            <section class="questions-list-section">
+                <h2>Existing Questions</h2>
+                <div id="questions-list" class="questions-list"></div>
+            </section>
+            
+            <!-- Modify Score Section -->
+            <section class="modify-score-section">
+                <h2>Modify Player Score</h2>
+                <input type="number" id="score-modification" class="input-field" placeholder="Enter score change">
+                <button onclick="modifyScore()" class="action-button">Modify Score</button>
+                <p id="current-score">Current Score: 0</p>
+            </section>
+            
+            <!-- Reset Score Section -->
+            <section class="reset-score-section">
+                <h2>Reset Player Score</h2>
+                <button onclick="resetScore()" class="action-button">Reset Score</button>
+            </section>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

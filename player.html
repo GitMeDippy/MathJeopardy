@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Player Dashboard</h1>
+            <button onclick="logout()" class="logout-button">Logout</button>
+        </header>
+        <div class="content">
+            <!-- Select Category Section -->
+            <section class="category-selection-section">
+                <h2>Select Category</h2>
+                <select id="category-select" class="input-field" onchange="displayQuestions()"></select>
+            </section>
+            
+            <!-- Display Questions Section -->
+            <section class="questions-selection-section">
+                <h2>Select Question</h2>
+                <select id="question-select" class="input-field" onchange="showSelectedQuestion()"></select>
+                <div id="question-display" class="question-display"></div>
+            </section>
+            
+            <!-- Display Score Section -->
+            <section class="score-display-section">
+                <h2>Score</h2>
+                <p id="score-display">Score: 0</p>
+            </section>
+        </div>
+    </div>
+    <script src="player.js"></script>
+</body>
+</html>
